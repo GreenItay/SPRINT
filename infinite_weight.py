@@ -54,9 +54,9 @@ def find_neighbors(grid, _i, _j, distance) -> list[Coordinate]:
     neighbors = []
 
     for i in range(_i, _i + distance + 1): # out of bounds
-        for j in range(_j, _j + distance + 1):
+        for j in range(_j - distance, _j + distance + 1):
             if i != _i or j != _j:
-                if(i < len(grid) and j < len(grid[0])):
+                if(0<= i < len(grid) and 0<= j < len(grid[0])):
                     neighbors.append(grid[i][j])
                     print(grid[i][j])
     return neighbors
