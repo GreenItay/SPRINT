@@ -11,7 +11,7 @@ def create_radar_graph(source: Coordinate, target :Coordinate, radar: Radar):
     :param: radar - Radar object
     :return: g - nx.Graph object with legal lines between neighbors inside the grid
     """
-    points_density = 0.25
+    points_density = 0.251
     radius = radar.radius
     points_in_side = int(radar.radius * points_density) + 2
     grid = [[0 for i in range(points_in_side)] for j in range(points_in_side)]
